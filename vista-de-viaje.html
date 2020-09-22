@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="vendor/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Vista de viaje (socio)</title>
+</head>
+
+<body>
+    <!-- menu -->
+    <nav class="navbar yg-navbar fixed-top navbar-expand-lg navbar-light justify-content-lg-center pt-3">
+        <a class="navbar-brand" href="home.html">
+            <img src="img/logo.svg" class="yg-logo d-inline-block align-top" alt="" />
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="home.html">Nosotros</a>
+                </li>
+                <li class="nav-item px-2">
+                    <a class="nav-link" href="centro-de-ayuda.html">Ayuda</a>
+                </li>
+                <!-- profile nav item -->
+                <li class="nav-item px-2 px-lg-3">
+                    <div class="btn-group yg-nav-profile-item">
+                        <button type="button" class="btn nav-profile dropdown-toggle" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Sergio
+
+                            <img src="img/demo-associate.png"
+                                class="rounded-circle d-inline-block img-fluid nav-profile-img" alt="" />
+
+                            <!-- "badge-empty" class to hiden notification badge -->
+                            <span class="badge badge-info">9</span>
+                        </button>
+
+                        <div class="dropdown-menu dropdown-menu-right mt-2 yg-font-2">
+                            <a class="dropdown-item bold-5" href="notificaciones-socio.html">
+                                <div class="d-flex">
+                                    <span>Notificaciones</span>
+                                    <div class="dropdown-notification-bubble"></div>
+                                </div>
+                            </a>
+                            <a class="dropdown-item bold-5" href="historial-de-viajes-socio.html">Mis viajes</a>
+                            <a class="dropdown-item bold-5" href="disponibilidad-de-unidades.html">Disponibilidad de
+                                unidades</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Depósitos</a>
+                            <a class="dropdown-item" href="informacion-personal-socio.html">Mi cuenta</a>
+                            <a class="dropdown-item" href="#">Cerrar sesión</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item px-2 px-lg-3">
+                    <a href="#" class="btn nav-cart yg-box-shadow" role="button" data-target="#cartModal"
+                        data-toggle="modal">
+                        <img src="img/icons/cart.svg" class="d-inline-block img-fluid nav-cart-icon" alt="" />
+
+                        <!-- "badge-empty" class to hiden notification badge -->
+                        <span class="badge badge-success">9</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- content -->
+    <div class="container yg-container justify-content-center yg-trip-view-container">
+
+        <div class="row">
+            <!-- left col -->
+            <div class="col-md-7">
+                <!-- dates -->
+                <div class="yg-rate-trip-dates mb-5">
+                    <div class="d-flex flex-column flex-sm-row mb-4 text-secondary">
+                        <div class="yg-rate-trip-date-info col-sm-6 pl-0 pr-3 mb-4 m-sm-0">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="img/icons/date.svg" alt="" class="yg-rate-trip-date-icon">
+                                <h4>Salida:</h4>
+                            </div>
+
+                            <div class="mb-2">23/05/20 - 09:00am</div>
+                            <div class="mb-1">Calle Alfredo R. Plasencia #450, Guadalajara, Jal.</div>
+                            <div class="mb-1">Catedral de Guadalajara.</div>
+                        </div>
+                        <div class="yg-rate-trip-date-info col-sm-6 pl-0">
+                            <div class="d-flex align-items-center mb-3">
+                                <img src="img/icons/date.svg" alt="" class="yg-rate-trip-date-icon">
+                                <h4>Regreso:</h4>
+                            </div>
+
+                            <div class="mb-2">23/05/20 - 09:00am</div>
+                            <div class="mb-1">Calle Alfredo R. Plasencia #450, Guadalajara, Jal.</div>
+                            <div class="mb-1">Catedral de Guadalajara.</div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column flex-sm-row justify-content-sm-between">
+                        <div class="mb-3 yg-rate-trip-category">
+                            Viaje sencillo
+                        </div>
+                    </div>
+                </div>
+
+                <!-- services -->
+                <div class="mb-4">
+                    <h6 class="bold-6 mb-3">Servicios</h6>
+
+                    <div class="yg-list text-secondary">
+                        <div class="yg-list-item">
+                            <div class=" d-flex align-items-center ">
+                                <img src="img/icons/round-trip.svg" alt="" class="yg-list-icon">
+                                <span class="yg-list-label">Viaje redondo</span>
+                            </div>
+                        </div>
+
+                        <div class="yg-list-item">
+                            <div class=" d-flex align-items-center ">
+                                <img src="img/icons/seat.svg" alt="" class="yg-list-icon">
+                                <span class="yg-list-label">Asientos individuales</span>
+                            </div>
+                        </div>
+
+                        <div class="yg-list-item">
+                            <div class=" d-flex align-items-center ">
+                                <img src="img/icons/disabled.svg" alt="" class="yg-list-icon">
+                                <span class="yg-list-label">Unidades para discapacitados</span>
+                            </div>
+                        </div>
+
+                        <div class="yg-list-item">
+                            <div class=" d-flex align-items-center ">
+                                <img src="img/icons/food.svg" alt="" class="yg-list-icon">
+                                <span class="yg-list-label">Comer / beber en el vehículo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="politicas-de-cancelacion.html" class="underline mb-5 d-block text-info">
+                    Políticas de cancelación para socios
+                </a>
+            </div>
+
+            <!-- right col -->
+            <div class="col-md-5">
+                <!-- car info -->
+                <div class="text-left text-md-right">
+                    <img src="img/demo-auto.png" alt="" class="img-fluid mb-3">
+                    <div class="bold-6 black">Pasajero</div>
+                    <div class="text-secondary yg-font-1-2">Enrique Segobiano</div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- order action -->
+        <div class="pt-4 text-lg-right">
+            <button type="button" class="btn btn-lg px-2 btn-outline-success yg-font-2 black mb-2 mr-3"
+                data-target="#wantToCancelAssociate" data-toggle="modal">
+                Cancelar viaje
+            </button>
+            <button type="button" class="btn btn-lg px-5 yg-gradient yg-font-2 mb-2">
+                Aceptar viaje
+            </button>
+        </div>
+
+    </div>
+
+    <!-- modal: cancelar viaje -->
+    <div class="modal fade" id="wantToCancelAssociate" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog yg-trip-view-modal">
+            <div class="modal-content">
+                <div class="modal-body pb-0">
+                    <div class="yg-modal-close-light">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <div class="pt-5">
+                        <h3 class="text-primary bold-6 h1 mb-4 text-center">¿Realmente deseas cancelar el viaje?</h3>
+                        <div class="col-7 pl-0 mb-4 text-secondary">
+                            Te recordamos que si después de haber aceptado el viaje lo cancelas tendrás un -5%
+                            penalización del costo total del viaje.
+                        </div>
+
+                        <div class="yg-cancelled-trips-counter mb-4" data-cancelled-trips="2">
+                            <div class="d-flex align-items-center">
+                                <img src="img/icons/circle-outline.svg" alt="">
+                                <img src="img/icons/circle-outline.svg" alt="">
+                                <img src="img/icons/circle-outline.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="col-7 pl-0 mb-4 text-secondary">
+                            *Solo puedes cancelar 2 viajes, al cancelar el tercer viaje serás dado de baja.
+                        </div>
+
+                        <!-- buttons -->
+                        <div>
+                            <a href="oh-no-cancelaciones.html"
+                                class="btn btn-lg btn-outline-success text-secondary mr-3 mb-2 yg-font-2 px-3"
+                                role="button">
+                                Si cancelar
+                            </a>
+                            <button class="btn btn-lg yg-gradient yg-font-2 mb-2 px-5" data-dismiss="modal">
+                                No cancelar
+                            </button>
+                        </div>
+
+                        <div class="trip-view-img-wrapper">
+                            <img src="img/vista-de-viaje/cancelar-viaje.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="yg-gradient">
+        <div class="yg-footer container">
+            <!-- footer links -->
+            <footer>
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <h4 class="yg-footer-title mb-4">
+                            Socio Yogo
+                        </h4>
+                        <div class="yg-footer-links">
+                            <a href="inicio-de-sesion-socio.html" class="mb-3">
+                                Ingresar
+                            </a>
+                            <a href="como-ser-socio-yogo-3-pasos.html#ventajas" class="mb-3">
+                                Ventajas
+                            </a>
+                            <a href="como-ser-socio-yogo-3-pasos.html" class="mb-3">
+                                Como ser un socio Yogo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <h4 class="yg-footer-title mb-4">
+                            Contact
+                        </h4>
+                        <div class="yg-footer-links">
+                            <a href="mailto:contacto@yogomexico.com" class="mb-3">
+                                contacto@yogomexico.com
+                            </a>
+                            <a href="tel:3334578934" class="mb-3">
+                                Tel. 333 457 8934
+                            </a>
+                            <a href="https://facebook.com" class="mb-3" target="_blank">
+                                <i class="fab fa-facebook-f mr-2"></i> YogoPorti
+                            </a>
+                            <a href="https://instagram.com" class="mb-3" target="_blank">
+                                <i class="fab fa-instagram mr-2"></i> @Yogo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <h4 class="yg-footer-title mb-4">
+                            Yogo
+                        </h4>
+                        <div class="yg-footer-links">
+                            <a href="home.html" class="mb-3">
+                                Nosotros
+                            </a>
+                            <a href="centro-de-ayuda.html" class="mb-3">
+                                Centro de ayuda
+                            </a>
+                            <a href="centro-de-ayuda.html#socio" class="mb-3">
+                                Ayuda sobre el socio
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <h4 class="yg-footer-title mb-4">
+                            Newsletter
+                        </h4>
+                        <div class="yg-footer-links">
+                            <form action="request/mailchimpProcess.php" method="post" id="newsletterForm">
+                                <div class="form-group">
+                                    <input name="email" type="email" class="form-control yg-footer-input"
+                                        id="newsletterEmail" placeholder="@ Ingresa tu mail" />
+                                </div>
+                                <div class="text-right">
+                                    <button type="submit" class="btn btn-info yg-btn-rounded o w-auto d-inline-block">
+                                        Aceptar
+                                    </button>
+                                    <div class="pt-3" id="newsletterSuccess" style="display: none;">
+                                        Registro completado
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <!-- footer separator -->
+            <hr class="yg-footer-hr" />
+
+            <!-- footer bootom links -->
+            <div class="yg-footer-bottom">
+                <div class="row">
+                    <div class="col-md-3 pb-2">
+                        <a href="terminos-y-condiciones.html" class="yg-link-footer-bottom">
+                            Términos y condiciones
+                        </a>
+                    </div>
+                    <div class="col-md-3 pb-2">
+                        <a href="aviso-de-privacidad.html" class="yg-link-footer-bottom">
+                            Aviso de Privacidad
+                        </a>
+                    </div>
+                    <div class="col-md-2 pb-2">
+                        <a href="home.html" class="yg-link-footer-bottom">
+                            Información de Yogo
+                        </a>
+                    </div>
+                    <div class="col-md-4 pb-2">
+                        <div class="yg-link-footer-bottom">
+                            Sitio desarrollado por <a href="http://toracom.net" target="_blank"
+                                class="underline">Toracom</a> y
+                            <a href="http://somosrandom.com" target="_blank" class="underline">Sitio Random</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal: registro -->
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body pt-2">
+                    <div class="yg-modal-close-light">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+
+                    <h2 class="text-center bold-6 h5 mb-5 pt-3">Regístrate</h2>
+
+                    <!-- formulario -->
+                    <form class="needs-validation" autocomplete="off">
+                        <div class="form-group yg-form-group">
+                            <div class="mb-3 mt-4">
+                                <input class="form-control form-control-lg yg-input-top" type="text"
+                                    placeholder="* Nombre" required />
+
+                                <!-- Nombre, Apellido -->
+                                <input class="form-control form-control-lg yg-input-bottom" type="text"
+                                    placeholder="* Apellido" required />
+                                <small id="emailHelp" class="form-text text-muted">
+                                    Asegúrate de que tu nombre coincida con el que aparece en tu
+                                    identificación oficial.
+                                </small>
+                            </div>
+
+                            <!-- fecha de nacimiento-->
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="font-weight-bold">Fecha de
+                                    nacimiento</label>
+                                <div class="row pr-3 pl-3">
+                                    <select class="form-control col-md-4 yg-input-left">
+                                        <option>* Día</option>
+                                        <option value="">1</option>
+                                        <option value="">2</option>
+                                        <option value="">3</option>
+                                        <option value="">4</option>
+                                        <option value="">5</option>
+                                        <option value="">6</option>
+                                        <option value="">7</option>
+                                        <option value="">8</option>
+                                        <option value="">9</option>
+                                        <option value="">10</option>
+                                        <option value="">11</option>
+                                        <option value="">12</option>
+                                        <option value="">13</option>
+                                        <option value="">14</option>
+                                        <option value="">15</option>
+                                        <option value="">16</option>
+                                        <option value="">17</option>
+                                        <option value="">18</option>
+                                        <option value="">19</option>
+                                        <option value="">20</option>
+                                        <option value="">21</option>
+                                        <option value="">22</option>
+                                        <option value="">23</option>
+                                        <option value="">24</option>
+                                        <option value="">25</option>
+                                        <option value="">26</option>
+                                        <option value="">27</option>
+                                        <option value="">28</option>
+                                        <option value="">29</option>
+                                        <option value="">30</option>
+                                        <option value="">31</option>
+                                    </select>
+                                    <select class="form-control col-md-4 yg-input-left yg-input-right">
+                                        <option>* Mes</option>
+                                        <option value="1">Enero</option>
+                                        <option value="2">Febrero</option>
+                                        <option value="3">Marzo</option>
+                                        <option value="4">Abril</option>
+                                        <option value="5">Mayo</option>
+                                        <option value="6">Junio</option>
+                                        <option value="7">Julio</option>
+                                        <option value="8">Agosto</option>
+                                        <option value="9">Septiembre</option>
+                                        <option value="10">Octubre</option>
+                                        <option value="11">Noviembre</option>
+                                        <option value="12">Diciembre</option>
+                                    </select>
+                                    <select class="form-control col-md-4 yg-input-right">
+                                        <option>* Año</option>
+                                        <option value="">2020</option>
+                                        <option value="">2019</option>
+                                        <option value="">2018</option>
+                                        <option value="">2017</option>
+                                        <option value="">2016</option>
+                                        <option value="">2015</option>
+                                        <option value="">2014</option>
+                                        <option value="">2013</option>
+                                        <option value="">2012</option>
+                                        <option value="">2011</option>
+                                        <option value="">2010</option>
+                                        <option value="">2009</option>
+                                        <option value="">2008</option>
+                                        <option value="">2007</option>
+                                        <option value="">2006</option>
+                                        <option value="">2005</option>
+                                        <option value="">2004</option>
+                                        <option value="">2003</option>
+                                        <option value="">2002</option>
+                                        <option value="">2001</option>
+                                        <option value="">2000</option>
+                                        <option value="">1999</option>
+                                        <option value="">1998</option>
+                                    </select>
+
+                                    <small id="emailHelp" class="form-text text-muted">Debes tener al menos 18 años para
+                                        registrarte.</small>
+                                </div>
+                            </div>
+
+                            <!-- sexo -->
+                            <div class="mb-3">
+                                <select class="form-control" required>
+                                    <option value="">* Sexo</option>
+                                    <option value="1">Hombre</option>
+                                    <option value="2">Mujer</option>
+                                </select>
+                            </div>
+
+                            <!-- correo electronico-->
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg yg-input" type="email"
+                                    placeholder="* Correo electrónico" required />
+                                <small id="emailHelp" class="form-text text-muted">
+                                    Confirmaciones de viaje y recibos te la enviaremos por correo electrónico.
+                                </small>
+
+                                <!-- Ejemplo de mensaje de error -->
+                                <div class="yg-error-wrapper">
+                                    Introduce un correo electrónico válido.
+                                </div>
+                            </div>
+
+                            <!-- contraseña-->
+                            <div class="mb-3">
+                                <input class="form-control form-control-lg yg-input" type="text"
+                                    placeholder="* Contraseña" required />
+                                <small id="emailHelp" class="form-text text-muted">
+                                    Te enviaremos promociones, ofertas especiales, ideas y las actualizaciones de
+                                    nuestras políticas a través del correo electrónico.
+                                </small>
+
+                                <!-- Ejemplo de mensaje de error -->
+                                <div class="yg-error-wrapper">
+                                    Debe contener por lo menos 8 carácteres alfanuméricos
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-check custom-checkbox">
+                            <input type="checkbox" class="form-check-input custom-control-input" id="exampleCheck1"
+                                required />
+                            <label class="form-check-label text-secondary custom-control-label pl-2 pr-0 yg-font-1"
+                                for="exampleCheck1">No quiero recibir mensajes promocionales de Yogo. También puedo
+                                optar por desactivarlos en todo momento desde la configuración
+                                de mi cuenta o a través del enlace del mensaje.
+                            </label>
+                        </div>
+
+                        <p class="pt-3">
+                            Al seleccionar Aceptar y continuar a continuación, acepto los
+                            <a href="terminos-y-condiciones.html" class="text-success">Términos del servicio</a>, los
+                            <a href="terminos-y-condiciones.html" class="text-success">Términos del servicio de
+                                pagos</a>, la
+                            <a href="aviso-de-privacidad.html" class="text-success">Política de privacidad</a> y la
+                            Política contra la
+                            discriminación de Yogo.
+                        </p>
+
+                        <button type="submit" class="btn btn-lg btn-block btn-primary yg-gradient mb-5 mt-3 pb-2 pt-2">
+                            Aceptar y continuar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal: carrito -->
+    <div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body p-4 pb-5">
+                    <button type="button" class="close mb-5" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <!-- total cart items -->
+                    <div class="btn modal-nav-cart yg-box-shadow" role="button">
+                        <img src="img/icons/cart.svg" class="d-inline-block img-fluid nav-cart-icon" alt="" />
+                        <span class="badge badge-success">9</span>
+                    </div>
+
+                    <div class="pt-5">
+                        <!-- cart item -->
+                        <div class="yg-cart-vehicle-2 text-secondary">
+                            <div class="d-flex flex-column flex-sm-row">
+                                <div class="col-8 col-sm-5 mb-3 mb-sm-0">
+                                    <img src="img/car-bus.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="col-7 yg-ln-1">
+                                    <div class="yg-font-1">Viaje redondo</div>
+                                    <div class="yg-font-1">Centro, Tequila, Jal.</div>
+                                    <div class="yg-font-1">14 Pasajeros</div>
+
+                                    <div class="d-flex align-items-center pt-2 mb-3">
+                                        <div class="d-flex align-items-center mr-4">
+                                            <img src="img/icons/date.svg" alt="" class="yg-icon-date mr-2">
+                                            <span class="text-secondary">23/05/20</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mr-3">
+                                            <img src="img/icons/date.svg" alt="" class="yg-icon-date mr-2">
+                                            <span class="text-secondary">23/05/20</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex pt-2">
+                                <div class="col-5 text-sm-center">
+                                    <a href="#" class="text-secondary yg-font-2">Eliminar</a>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right yg-font-3 text-secondary">
+                                        $726.16
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- cart item -->
+                        <div class="yg-cart-vehicle-2 text-secondary">
+                            <div class="d-flex flex-column flex-sm-row">
+                                <div class="col-8 col-sm-5 mb-3 mb-sm-0">
+                                    <img src="img/car-luxury.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="col-7 yg-ln-1">
+                                    <div class="yg-font-1">Viaje redondo</div>
+                                    <div class="yg-font-1">Centro, Tequila, Jal.</div>
+                                    <div class="yg-font-1">14 Pasajeros</div>
+
+                                    <div class="d-flex align-items-center pt-2 mb-3">
+                                        <div class="d-flex align-items-center mr-4">
+                                            <img src="img/icons/date.svg" alt="" class="yg-icon-date mr-2">
+                                            <span class="text-secondary">23/05/20</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mr-3">
+                                            <img src="img/icons/date.svg" alt="" class="yg-icon-date mr-2">
+                                            <span class="text-secondary">23/05/20</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex pt-2">
+                                <div class="col-5 text-sm-center">
+                                    <a href="#" class="text-secondary yg-font-2">Eliminar</a>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right yg-font-3 text-secondary">
+                                        $726.16
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- cart item -->
+                        <div class="yg-cart-vehicle-2 text-secondary">
+                            <div class="d-flex flex-column flex-sm-row">
+                                <div class="col-8 col-sm-5 mb-3 mb-sm-0">
+                                    <img src="img/car-van.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="col-7 yg-ln-1">
+                                    <div class="yg-font-1">Viaje redondo</div>
+                                    <div class="yg-font-1">Centro, Tequila, Jal.</div>
+                                    <div class="yg-font-1">14 Pasajeros</div>
+
+                                    <div class="d-flex align-items-center pt-2 mb-3">
+                                        <div class="d-flex align-items-center mr-4">
+                                            <img src="img/icons/date.svg" alt="" class="yg-icon-date mr-2">
+                                            <span class="text-secondary">23/05/20</span>
+                                        </div>
+                                        <div class="d-flex align-items-center mr-3">
+                                            <img src="img/icons/date.svg" alt="" class="yg-icon-date mr-2">
+                                            <span class="text-secondary">23/05/20</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex pt-2">
+                                <div class="col-5 text-sm-center">
+                                    <a href="#" class="text-secondary yg-font-2">Eliminar</a>
+                                </div>
+                                <div class="col-6">
+                                    <div class="text-right yg-font-3 text-secondary">
+                                        $726.16
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="yg-line mb-4"></div>
+
+                    <div class="d-flex justify-content-end mb-4">
+                        <div class="bold-6 yg-font-5">Total</div>
+                        <div class="bold-6 yg-font-5 ml-5">
+                            $<span>2,178.48</span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-column col-8 offset-4 pr-0">
+                        <button class="btn btn-lg yg-btn-clear inline-block yg-font-3 mb-3">Ver carrito</button>
+                        <button class="btn btn-lg yg-gradient inline-block yg-font-3">Finalizar compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- scripts -->
+    <script src="js/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD-f1EwqXeVmncPaFsvn8LQDKt2G6tsMSU" async defer>
+    </script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="vendor/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="vendor/bootstrap-datepicker/locales/bootstrap-datepicker.es.min.js"></script>
+    <script src="vendor/scrollreveal-master/dist/scrollreveal.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
